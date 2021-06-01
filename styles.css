@@ -1,0 +1,125 @@
+body> div#calendar{
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#calendar {
+  height: 1600px;
+  background-image: url('./background.png');
+  background-color: #010101;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 800px;
+  border: 1px solid #c9c9c9;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+#month{
+  display: grid; 
+  grid-template-rows: 15% auto 15%;
+}
+.month-title{
+  background-color: rgba(0,0,0,0.2);
+  padding: 0px 30px;
+}
+.month-title>h1, 
+.month-title>h4{
+  display: inline; 
+  margin: 0;
+  text-shadow: 2px 2px #000;
+  line-height: 120px;
+}
+.month-title>h1{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 80px;
+}
+.month-title>h4{
+  color: #D8D3CF;
+  font-size: 40px;
+}
+.month-footer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #010101;
+}
+.month-footer > div{
+  text-align: right;
+}
+.month-footer > div > img {
+  margin: 0;
+  height: 110px;
+  width: auto;
+  padding: 0px 30px;
+}
+.month-days{
+  padding: 0px 30px;
+  grid-template-rows: 30px auto;
+  background-color: rgba(0,0,0,0.2);
+}
+.weekend{
+  padding: 0;
+  margin: 0;
+  padding: 0px 0px 0px 15px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.weekend>li{
+  list-style-type: none;
+  display: inline; 
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 2px 2px #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.month-day{
+  display: grid;
+  grid-template-rows: 40% auto 20%;
+  font-size: 2rem;
+  border: 1px solid #CACACA;
+  min-height: 122px;
+}
+.month-day__header{
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  background-color: brown;
+  padding: 5px;
+}
+.month-day__header>div:first-child{
+  font-size: 0.6rem;
+}
+.month-day__header h3,
+.month-day__header>div:first-child> p, 
+.month-day__footer>p{
+  margin: 0;
+  padding: 0;
+}
+.month-day__header h3, 
+.month-day__header h3.previus-month{
+  text-align: right;
+  font-size: 1.5rem;
+}
+.month-day__header h3.previus-month, 
+.month-day__header h3.next-month{
+  color: #CACACA;
+}
+.month-day__header, 
+.month-day__body, 
+.month-day__footer{
+  padding: 5px;
+  background-color: #EFEFF1
+}
+.month-day__footer>p{
+  font-size: 1rem;
+  padding-bottom: 10px;
+  font-size: 0.6rem;
+}
+.month-day__body{
+  min-height: 20px;
+  
+}
+.month-days>div:last-child{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
